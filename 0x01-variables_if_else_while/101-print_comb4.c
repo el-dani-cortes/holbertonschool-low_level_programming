@@ -17,7 +17,7 @@ int main(void)
 		{
 			for (q = '2'; q <= '9' ; q++)
 			{
-				if (q != c && q != d && q > c && q > d)
+				if (q != c && q != d && d > c && q > c && q > d)
 				{
 					putchar (c);
 					putchar (d);
