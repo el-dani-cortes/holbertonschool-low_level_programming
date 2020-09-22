@@ -1,4 +1,4 @@
-#include <ctype.h>
+#include "holberton.h"
 
 /**
  * _isalpha - check for alphabet character.
@@ -8,15 +8,19 @@
  */
 int _isalpha(int c)
 {
-	int r;
+	int letter;
 
-	r = isalpha(c);
-	if (r != 0)
+	if (c > 64 && c < 91)
 	{
-		return (1);
+		letter = 1;
+	}
+	else if (c > 96 && c < 123)
+	{
+		letter = 1;
 	}
 	else
 	{
-		return (r);
+		letter = 0;
 	}
+	return (letter);
 }
