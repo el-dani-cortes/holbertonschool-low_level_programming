@@ -7,27 +7,19 @@
  */
 void jack_bauer(void)
 {
-	int m1;
-	int h1;
-	int m2;
-	int h2;
+	int hour;
+	int min;
 
-	for (h1 = 48 ; h1 <= 50 ; h1++)
+ 	for (hour = 0 ; hour < 24 ; hour++)
 	{
-		for (h2 = 48 ; h2 <= 52 ; h2++)
+		for (min = 0 ; min < 60 ; min++)
 		{
-			for (m1 = 48 ; m1 <= 53 ; m1++)
-			{
-				for (m2 = 48 ; m2 <= 57 ; m2++)
-				{
-					_putchar (h1);
-					_putchar (h2);
-					_putchar (':');
-					_putchar (m1);
-					_putchar (m2);
-					_putchar ('\n');
-				}
-			}
-		}
+			_putchar('0' + hour / 10);
+			_putchar('0' + hour % 10);
+			_putchar(':');
+			_putchar('0' + min / 10);
+			_putchar('0' + min % 10);
+			_putchar('\n');
+		 }
 	}
 }
