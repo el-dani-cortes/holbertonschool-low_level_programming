@@ -1,4 +1,4 @@
-#include <ctype.h>
+#include "holberton.h"
 
 /**
  * _islower - check for lowercase character.
@@ -8,12 +8,15 @@
  */
 int _islower(int c)
 {
-	if (islower(c) != 0)
+	int lowercase;
+
+	if (c > 96 && c < 123)
 	{
-		return (1);
+		lowercase = 1;
 	}
 	else
 	{
-		return (0);
+		lowercase = 0;
 	}
+	return (lowercase);
 }
