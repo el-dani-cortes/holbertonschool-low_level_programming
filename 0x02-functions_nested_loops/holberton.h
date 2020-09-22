@@ -28,4 +28,7 @@ int print_last_digit(int);
 /*Function to count every minute until 24 minutes*/
 void jack_bauer(void);
 
+/*Function to add two numbers*/
+int add(int, int);
+
 #endif /* _HOLBERTON_H_ */
