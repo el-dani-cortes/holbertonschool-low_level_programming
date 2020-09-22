@@ -22,4 +22,7 @@ int print_sign(int n);
 /*Computes the absolute value of an integer*/
 int _abs(int);
 
+/*Function to get the last digit of any number*/
+int print_last_digit(int);
+
 #endif /* _HOLBERTON_H_ */
