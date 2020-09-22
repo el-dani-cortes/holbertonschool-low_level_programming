@@ -25,4 +25,7 @@ int _abs(int);
 /*Function to get the last digit of any number*/
 int print_last_digit(int);
 
+/*Function to count every minute until 24 minutes*/
+void jack_bauer(void);
+
 #endif /* _HOLBERTON_H_ */
