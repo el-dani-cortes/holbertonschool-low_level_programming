@@ -2,6 +2,7 @@
 
 /**
  * main - causes an infinite loop
+ * @\\o/\n: Funny face
  *
  * Return: 0
  */
