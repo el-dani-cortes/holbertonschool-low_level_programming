@@ -13,7 +13,7 @@ int main(void)
 
 	i = 0;
 /**
- * Here begins the loop
+ * while - Here begins the loop
  *
  *while (i < 10)
  *{
