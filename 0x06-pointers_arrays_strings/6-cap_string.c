@@ -26,10 +26,6 @@ char *cap_string(char *a)
 				{
 					a[j] = a[j] - 32;
 				}
-				else
-				{
-					continue;
-				}
 			}
 		}
 	}
