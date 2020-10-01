@@ -1,4 +1,4 @@
-B#include "holberton.h"
+#include "holberton.h"
 
 /**
  * *_strcat - function that concatenates two strings
@@ -22,5 +22,4 @@ char *_strcat(char *dest, char *src)
 	}
 	dest[len + i] = '\0';
 	return (dest);
-	_putchar ('\n');
 }
