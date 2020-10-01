@@ -13,4 +13,7 @@ char *_strncat(char *dest, char *src, int n);
 /*Function that copies a string*/
 char *_strncpy(char *dest, char *src, int n);
 
+/*Function that compares two strings*/
+int _strcmp(char *s1, char *s2);
+
 #endif /* HOLBERTON_H */
