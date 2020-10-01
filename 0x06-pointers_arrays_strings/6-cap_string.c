@@ -19,7 +19,7 @@ char *cap_string(char *a)
 	for (j = 0 ; j < i ; j++)
 	{
 		if (a[j] > 96 && a[j] < 123)
-		{B
+		{
 			for (k = 0; k < 13; k++)
 			{
 				if (a[j - 1] == b[k])
