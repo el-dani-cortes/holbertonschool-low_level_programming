@@ -15,8 +15,6 @@ char *string_toupper(char *a)
 	{
 		i++;
 	}
-
-	i = i - 1;
 	for (j = 0 ; j < i ; j++)
 	{
 		if (a[j] > 96 && a[j] < 123)
