@@ -11,15 +11,14 @@ char *_strpbrk(char *s, char *accept)
 {
 	for (; ; s++)
 	{
+		accept++;
 		if (*accept == *s)
 		{
-			break;
+			return (s);
 		}
 		else if (*s == '\0')
 		{
 			return ('\0');
 		}
-		accept++;
 	}
-	return (s - 1);
 }
