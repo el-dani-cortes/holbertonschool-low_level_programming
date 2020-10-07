@@ -16,4 +16,7 @@ int _strlen_recursion(char *s);
 /*Function that return factorial number*/
 int factorial(int n);
 
+/*Function that returns the value of x raised to the power of y*/
+int _pow_recursion(int x, int y);
+
 #endif /* HOLBERTON_H */
