@@ -3,27 +3,25 @@
 
 /**
  * print_diagsums - Function that prints a chessboard.
- * @a: Pointer to array board.
+ * @a: Pointer to array.
  * @size: size of the array.
  *
  * Return: always void.
  */
 void print_diagsums(int *a, int size)
 {
-	int i;
-	int sum1, sum2;
+	long int i, sum1 = 0, sum2 = 0;
 
-	i = 0;
-	while  (i < size * size)
+	for (i = 0; i < size * size; i++)
 	{
-		sum1 += a[i];
-		i = i + size + 1;
+		if (i % (size + 1) == 0)
+		{			
+			sum1 += *(a + i);
+		}
+		if (i % (size - 1) == 0 && i < size * size - 1)
+		{
+			sum2 += *(a + i);
+		}
 	}
-	i = size - 1;
-	while  (i <= (size - 1) * size)
-	{
-		sum2 += a[i];
-		i = i + size - 1;
-	}
-	printf("%d, %d\n", sum1, sum2);
+ 	printf ("%ld, %ld \n", sum1, sum2);
 }
