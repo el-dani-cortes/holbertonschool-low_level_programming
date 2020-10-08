@@ -12,17 +12,17 @@
  */
 int pali(int i, int len, char *s)
 {
-	if (i == len)
+	if (i == len - 1)
 	{
 		return (1);
 	}
-	if (s[i] != s[len - 1])
+	else if (s[i] != s[len - 1])
 	{
 		return (0);
 	}
-	if (i < len)
+	else if (i < len - 1)
 	{
-		pali(i + 1, len - 1, s);
+		return (pali(i + 1, len - 1, s));
 	}
 	return (1);
 }
