@@ -13,7 +13,7 @@ int _pali(int len, char *s1, char *s2, int i)
         }
 
 }
-int _lenght(int len, char *s1, char s2)
+int _lenght(int len, char *s1, char *s2)
 {
         if (s2 != '\0')
         {
