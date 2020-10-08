@@ -25,9 +25,10 @@ int prime(int i, int num)
 	}
 	else
 	{
-		prime(i + 1, num);
+		return (prime(i + 1, num));
 	}
 }
+
 
 /**
  * is_prime_number - function that said is a prime number.
@@ -39,10 +40,6 @@ int is_prime_number(int n)
 {
 	/* base case */
 	if (n <= 1)
-	{
-		return (0);
-	}
-	if (n % 2 == 0 && n != 2)
 	{
 		return (0);
 	}
