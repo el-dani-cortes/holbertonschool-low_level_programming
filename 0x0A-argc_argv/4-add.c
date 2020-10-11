@@ -12,7 +12,7 @@
 int main(int argc, char *argv[])
 {
 	int i;
-	unsigned int sum = 0;
+	unsigned long int sum = 0;
 
 	if (argc == 1)
 	{
@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 				return (1);
 			}
 		}
-		printf("%d\n", (sum));
+		printf("%lu\n", sum);
 	}
 	return (0);
 }
