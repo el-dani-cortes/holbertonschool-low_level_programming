@@ -1,0 +1,36 @@
+#include "holberton.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+/**
+ * main - Program that add two positive numbers
+ * @argc: Number of command lines arguments.
+ * @argv: Character of arrays.
+ *
+ * Return: 0 when bo number is passed or 1 for error, when are not digits
+ */
+int main(int argc, char *argv[])
+{
+	int i;
+	unsigned int sum = 0;
+
+	if (argc == 1)
+	{
+		printf("0\n");
+	}
+	else if (argc > 1)
+	{
+		for (i = 1; i < argc; i++)
+		{
+			if (atoi(argv[i]) != 0)
+				sum += atoi(argv[i]);
+			else
+			{
+				printf("Error\n");
+				return (1);
+			}
+		}
+		printf("%d\n", sum);
+	}
+	return (0);
+}
