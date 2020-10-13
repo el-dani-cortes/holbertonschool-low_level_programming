@@ -16,4 +16,7 @@ char *str_concat(char *s1, char *s2);
 /*Function that returns a pointer to a 2 dimensional array of integers*/
 int **alloc_grid(int width, int height);
 
+/*Function frees a 2-D grid previously created by your alloc_grid*/
+void free_grid(int **grid, int height);
+
 #endif /* HOLBERTON_H */
