@@ -17,7 +17,7 @@ char *_strdup(char *str)
 	{
 		j++;
 	}
-	if (str[0] == '\0')
+	if (str == '\0')
 	{
 		return ('\0');
 	}
@@ -31,7 +31,8 @@ char *_strdup(char *str)
 				ptr[i] = str[i];
 			}
 		}
-		return (ptr);
+		else
+			return (NULL);
 	}
-	return ('\0');
+	return (ptr);
 }
