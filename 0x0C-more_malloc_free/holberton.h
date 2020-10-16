@@ -16,4 +16,7 @@ void *_calloc(unsigned int nmemb, unsigned int size);
 /*Function that creates an array of integers.*/
 int *array_range(int min, int max);
 
+/*Function that reallocates a memory block using malloc and free*/
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
+
 #endif /* HOLBERTON_H */
