@@ -22,5 +22,12 @@ void init_dog(struct dog *d, char *name, float age, char *owner);
 /*Function  to print struct dog*/
 void print_dog(struct dog *d);
 
+/**
+ * dog_t - Typedef for struct dog
+ */
+typedef struct dog dog_t;
+
+
+
 
 #endif /* FILE_H */
