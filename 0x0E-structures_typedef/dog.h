@@ -33,4 +33,8 @@ dog_t *new_dog(char *name, float age, char *owner);
 /*Function returns a pointer to a newly allocated space in memory*/
 char *_strdup(char *str);
 
+/*Function that frees dogs*/
+void free_dog(dog_t *d);
+
+
 #endif /* FILE_H */
