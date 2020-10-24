@@ -17,9 +17,9 @@ void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
 
 /**
- * struct - Struct format_s
+ * struct format_s - Struct type for type and function asociated
  *
- * @op: The operator
+ * @type: type to evaluate
  * @f: The function associated
  */
 typedef struct format_s
