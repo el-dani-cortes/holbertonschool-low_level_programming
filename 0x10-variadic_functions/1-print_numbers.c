@@ -30,10 +30,9 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 			}
 			else
 				printf("(nil)");
-
-			va_end(num_list);
+		}
 		else
-			printf("(nil)")
+			printf("(nil)");
 	}
-	printf
+	va_end(num_list);
 }
