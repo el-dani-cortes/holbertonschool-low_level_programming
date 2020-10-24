@@ -41,7 +41,13 @@ void printf_float(va_list a)
  */
 void printf_string(va_list a)
 {
-	printf("%s", va_arg(a, char *));
+	char *s;
+
+	s = va_arg(a, char *);
+	if (s != NULL)
+		printf("%s", s);
+	else
+		printf("(nil)");
 }
 
 /**
@@ -65,7 +71,7 @@ void print_all(const char * const format, ...)
 	char *s = "";
 
 	va_start(p_list, format);
-	while (format[i] != '\0')
+	while (format != NULL && format[i] != '\0')
 	{
 		while (p_type[j].type != '\0')
 		{
