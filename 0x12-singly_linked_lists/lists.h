@@ -37,4 +37,9 @@ list_t *add_node_end(list_t **head, const char *str);
 /*Function that frees a list_t list*/
 void free_list(list_t *head);
 
+/*Function that print a string before main function*/
+/*Apply the constructor attribute to executed before main() */
+void print_before_main(void) __attribute__ ((constructor));
+
+
 #endif /*FILE_H*/
