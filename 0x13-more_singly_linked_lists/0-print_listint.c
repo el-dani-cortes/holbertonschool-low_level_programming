@@ -20,6 +20,6 @@ size_t print_listint(const listint_t *h)
 		}
 		return (num_node);
 	}
-	printf("(nil)");
+	printf("(nil)\n");
 	return (0);
 }
