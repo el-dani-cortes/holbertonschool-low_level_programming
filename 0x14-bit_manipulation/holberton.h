@@ -7,6 +7,9 @@
 #include <string.h>
 
 
+/*Function that writes the character c to stdout*/
+int _putchar(char c);
+
 /*Function that converts a binary number to an unsigned int*/
 unsigned int binary_to_uint(const char *b);
 
