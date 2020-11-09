@@ -13,6 +13,8 @@ int create_file(const char *filename, char *text_content)
 
 	for (i = 0; text_content[i]; i++)
 	{}
+	if (text_content == NULL)
+		text_content = "";
 	if (filename)
 	{
 		fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 00600);
@@ -20,7 +22,7 @@ int create_file(const char *filename, char *text_content)
 		{
 			return (-1);
 		}
-		validate = write(fd, text_content, i - 1);
+		validate = write(fd, text_content, i);
 		if (validate == -1)
 			return (-1);
 		close(fd);
