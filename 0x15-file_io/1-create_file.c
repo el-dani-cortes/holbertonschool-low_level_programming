@@ -9,7 +9,7 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int fd, i, validate;
+	int fd, i;
 
 	for (i = 0; text_content[i]; i++)
 	{}
@@ -22,9 +22,7 @@ int create_file(const char *filename, char *text_content)
 		{
 			return (-1);
 		}
-		validate = write(fd, text_content, i);
-		if (validate == -1)
-			return (-1);
+		write(fd, text_content, i);
 		close(fd);
 		return (1);
 	}
