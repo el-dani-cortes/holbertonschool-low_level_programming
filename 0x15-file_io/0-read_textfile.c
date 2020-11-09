@@ -21,10 +21,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 			return (0);
 		}
 		num_letters = read(fd, buf, letters);
+		close(fd);
 		write(STDOUT_FILENO, buf, letters);
 		if (num_letters == -1)
 			return (0);
-		close(fd);
 		return (num_letters);
 	}
 	return (0);
