@@ -40,8 +40,8 @@ void error_open(int fd_from, int fd_to, const char *f_from, const char *f_to)
 	}
 	if (fd_to == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", f_to);
-		exit(98);
+		dprintf(STDERR_FILENO, "Error: Can't write from file %s\n", f_to);
+		exit(99);
 	}
 }
 /**
@@ -53,7 +53,7 @@ void error_open(int fd_from, int fd_to, const char *f_from, const char *f_to)
  */
 void copy_file(const char *file_from, const char *file_to)
 {
-	int fd_from, fd_to, validate, num_bytes, close_to, close_from;
+	int fd_from, fd_to, validate = 0, num_bytes, close_to, close_from;
 	char *buf;
 
 	buf = malloc(sizeof(char) * 1024);
