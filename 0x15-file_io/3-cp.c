@@ -41,7 +41,7 @@ void error_write(int fd, const char *file_name)
 {
 	if (fd == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write from file %s\n", file_name);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_name);
 		exit(99);
 	}
 }
