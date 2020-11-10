@@ -51,14 +51,14 @@ void error_open(int fd_from, int fd_to, const char *f_from, const char *f_to)
  *
  * Return: Always nothing.
  */
-void copy_file(const char *file_from, const char *file_to)
+int copy_file(const char *file_from, const char *file_to)
 {
 	int fd_from, fd_to, validate = 0, num_bytes, close_to, close_from;
 	char *buf;
 
 	buf = malloc(sizeof(char) * 1024);
 	if (!buf)
-		exit(-1);
+		return (-1);
 	fd_from = open(file_from, O_RDONLY);
 	fd_to = open(file_to, O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	error_open(fd_from, fd_to, file_from, file_to);
@@ -75,12 +75,15 @@ void copy_file(const char *file_from, const char *file_to)
 		{
 			free(buf);
 			buf = malloc(sizeof(char) * 1024);
+			if (!buf)
+				return (-1);
 		}
 	}
 	free(buf);
 	close_from = close(fd_from);
 	close_to = close(fd_to);
 	error_close(close_to, close_from, fd_from, fd_to);
+	return (0);
 }
 /**
  * main - program that copies the content of a file to another file.
