@@ -64,6 +64,12 @@ int copy_file(const char *file_from, const char *file_to)
 	error_open(fd_from, fd_to, file_from, file_to);
 	while ((num_bytes = read(fd_from, buf, 1024)) != 0)
 	{
+		if (num_bytes == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n",
+				file_from);
+			exit(98);
+		}
 		validate = write(fd_to, buf, num_bytes);
 		if (validate == -1)
 		{
