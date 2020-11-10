@@ -54,7 +54,7 @@ void error_write(int fd, const char *file_name)
  */
 int copy_file(const char *file_from, const char *file_to)
 {
-	int fd_from, fd_to, validate = 0, num_bytes, close_to, close_from;
+	int fd_from, fd_to, validate, num_bytes, close_to, close_from;
 	char *buf;
 
 	buf = malloc(sizeof(char) * 1024);
