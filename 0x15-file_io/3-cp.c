@@ -13,12 +13,12 @@ void error_close(int close_from, int close_to, int fd_from, int fd_to)
 {
 	if (close_from == -1)
 	{
-		dprintf(2, "Error: Can't close fd %d\n", fd_from);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_from);
 		exit(100);
 	}
 	if (close_to == -1)
 	{
-		dprintf(2, "Error: Can't close fd %d\n", fd_to);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_to);
 		exit(100);
 	}
 }
@@ -35,12 +35,12 @@ void error_open(int fd_from, int fd_to, const char *f_from, const char *f_to)
 {
 	if (fd_from == -1)
 	{
-		dprintf(2, "Error: Can't read from file %s\n", f_from);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", f_from);
 		exit(98);
 	}
 	if (fd_to == -1)
 	{
-		dprintf(2, "Error: Can't read from file %s\n", f_to);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", f_to);
 		exit(98);
 	}
 }
@@ -67,7 +67,8 @@ void copy_file(const char *file_from, const char *file_to)
 		validate = write(fd_to, buf, num_bytes);
 		if (validate == -1)
 		{
-			dprintf(2, "Error: Can't write to %s\n", file_to);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n",
+				file_to);
 			exit(99);
 		}
 		if (validate == 1024)
