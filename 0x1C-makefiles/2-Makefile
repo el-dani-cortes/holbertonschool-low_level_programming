@@ -9,5 +9,5 @@ OBJ = $(SRC:.c=.o) # Substitution References
 # Rule all: Build the holberton executable file
 # 1. Implicity rule to updating .o files
 # 2. Then compile with .o files and executable
-all:
+all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
