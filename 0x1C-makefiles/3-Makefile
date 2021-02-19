@@ -13,23 +13,22 @@ RM = rm -f
 all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
-
 # This is declare to making this rules a prerequisite of the special target
 .PHONY: clean oclean fclean re
 
 # Deletes all Emacs and Vim temporary files along with the executable
 clean:
-	$(RM) *~ holberton
+	$(RM) *~ $(NAME)
 
 # Deletes the object files
 oclean:
-	$(RM) main.o holberton.o
+	$(RM) $(OBJ)
 
 # Deletes all Emacs and Vim temporary files, the executable,
 # and the object files
 fclean:
-	$(RM) *~ holberton
-	$(RM) main.o holberton.o
+	$(RM) *~ $(NAME)
+	$(RM) $(OBJ)
 
 # Forces recompilation of all source files
 re: oclean all
