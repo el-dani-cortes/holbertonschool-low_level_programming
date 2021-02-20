@@ -17,9 +17,9 @@ def island_perimeter(grid):
 
     """
     count = 0
-    prev_number = 0
     connection_h = 0
     connection_v = 0
+    # Count horizontal connection of numbers 1
     for _list in grid:
         i = 1
         for number in _list:
@@ -28,12 +28,12 @@ def island_perimeter(grid):
                 if i < len(_list) and number == _list[i]:
                     connection_h += 1
             i += 1
-    # Count vertical connection  of number 1
-    for _list in grid:
-        for i in range(len(_list) - 1):
-            index = grid.index(_list)
-            if _list[i] == 1 and _list[i] == grid[index + 1][i]:
-                connection_v += 1
+    # Count vertical connection of numbers 1
+    for index, _list in enumerate(grid):
+        for i in range(0, len(_list)):
+            if index < len(grid) - 1:
+                if _list[i] == 1 and _list[i] == grid[index + 1][i]:
+                    connection_v += 1
     total = count * 4
     horizontal = connection_h * 2
     vertical = connection_v * 2
