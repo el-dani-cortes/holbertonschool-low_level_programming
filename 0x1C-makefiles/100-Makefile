@@ -7,14 +7,13 @@ NAME = holberton
 OBJ = $(SRC:.c=.o) # Substitution References
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
-
 # This is declare to making this rules a prerequisite of the special target
-.PHONY: clean oclean fclean re all
+.PHONY: clean oclean fclean all
 
 # Rule all: Build the holberton executable file
 # 1. Implicity rule to updating .o files
 # 2. Then compile with .o files and executable
-all: $(OBJ)
+all: $(OBJ) m.h
 	$(CC) $(OBJ) -o $(NAME)
 
 # Deletes all Emacs and Vim temporary files along with the executable
