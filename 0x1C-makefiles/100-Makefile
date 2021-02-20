@@ -15,7 +15,7 @@ CFLAGS = -Wall -Werror -Wextra -pedantic
 # 1. Implicity rule to updating .o files
 # 2. Then compile with .o files and executable
 all: $(OBJ)
-	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+	$(CC) $(OBJ) -o $(NAME)
 
 # Deletes all Emacs and Vim temporary files along with the executable
 clean:
