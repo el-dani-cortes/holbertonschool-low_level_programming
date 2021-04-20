@@ -14,12 +14,11 @@
 int jump_search(int *array, size_t size, int value)
 {
 	size_t a = 0;
-	size_t b = sqrt(size), i = 0;
+	size_t b = 0, i = 0;
 
 	if (array != NULL)
 	{
-		printf("Value checked array[%lu] = [%d]\n", a, array[a]);
-		while (array[b] < value && b < size)
+		while (b < size && array[b] < value)
 		{
 			a = b;
 			b = b + sqrt(size);
