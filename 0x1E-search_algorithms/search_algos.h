@@ -30,5 +30,11 @@ int jump_search(int *array, size_t size, int value);
  */
 int interpolation_search(int *array, size_t size, int value);
 
+/*
+ * Function that searches for a value in a sorted array
+ * of integers using the Exponential search algorithm
+ */
+int exponential_search(int *array, size_t size, int value);
+
 
 #endif /* SEARCH_H */
