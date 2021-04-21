@@ -38,6 +38,8 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 			low = low->next;
 		}
 	}
+	if (list->n == value)
+		return (list);
 	return (NULL);
 
 }
