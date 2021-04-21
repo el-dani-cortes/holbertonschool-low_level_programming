@@ -16,7 +16,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 	listint_t *low =  NULL, *high = NULL;
 	size_t limit = 0;
 
-	if (list != NULL && list->n != value)
+	if (list != NULL)
 	{
 		low = list;
 		high = list;
@@ -38,8 +38,6 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 			low = low->next;
 		}
 	}
-	if (list->n == value)
-		return (list);
 	return (NULL);
 
 }
